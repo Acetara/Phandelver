@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps - Lost Mines of Phandelver</title>
+    <link rel="stylesheet" href="styles_maps.css">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=UnifrakturMaguntia:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <nav>
+            <a href="index.html" class="button">HOME</a>
+            <a href="characters.html" class="button">CHARACTERS</a>
+            <a href="maps.html" class="button">MAPS</a>
+            <a href="other_links.html" class="button">OTHER LINKS</a>
+        </nav>
+        <div class="parchment">
+            <div class="content">
+                <h2 class="header">Places and placenames</h2>
+                <div class="map-section">
+                    <p class="map-name">Triboar Trail & Neverwinter</p>
+                    <div class="image-placeholder map1" onclick="openModal('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/swordcoast_map.jpeg')"></div>
+                </div>
+                <div class="map-section">
+                    <p class="map-name">Phandalin</p>
+                    <div class="image-placeholder map2" onclick="openModal('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/phandalin_map.png')"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

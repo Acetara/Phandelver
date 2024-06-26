@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Forum', serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+    background-image: url('background_recap.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden; /* Ensure no overflow */
+    padding-top: 50px; /* Add padding to top for spacing */
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 76, 54, 0.5); /* Brown tint */
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px; /* Add space between the navigation and the parchment */
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px 70px;
+    border: 2px solid white;
+    font-size: 1.2rem;
+    font-family: 'Forum', serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+}
+
+.parchment {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    background-image: url('parchment_horizontal.png'); /* Use the rotated parchment image */
+    background-size: cover; /* Ensure the image covers the whole area */
+    background-repeat: repeat-x; /* Repeat horizontally */
+    padding: 40px 20px;
+    margin-top: 20px; /* Add space between the navigation and the parchment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh; /* Ensure it takes up at least the full viewport height */
+    overflow-y: auto; /* Make the parchment scrollable */
+}
+
+.content {
+    text-align: center;
+    color: black;
+    width: 100%;
+    padding: 0 20px; /* Add padding to the left and right to center the text */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.header {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-family: 'Forum', serif;
+    font-size: 1.2rem;
+    margin: 10px 0; /* Reduce margin to bring text closer to the image placeholder */
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.image-grid:first-of-type {
+    justify-content: space-evenly; /* Ensure three images on the top row */
+}
+
+.image-grid:last-of-type {
+    justify-content: space-evenly; /* Ensure two images on the bottom row are centered */
+}
+
+.image-placeholder {
+    width: 210px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    margin-top: 20px;
+    background-size: cover; /* Ensure the entire image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Start with a transparent background */
+    transition: background-color 0.3s ease; /* Transition effect */
+    z-index: 1;
+}
+
+.image-placeholder:hover::after {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+.image-placeholder.image1 {
+    background-image: url('8.png');
+}
+
+.image-placeholder.image2 {
+    background-image: url('5.png');
+}
+
+.image-placeholder.image3 {
+    background-image: url('6.png');
+}
+
+.image-placeholder.image4 {
+    background-image: url('4.png');
+}
+
+.image-placeholder.image5 {
+    background-image: url('9.png');
+}
+
+.image-placeholder.map1 {
+    background-image: url('path_to_map_image1.jpg');
+}
+
+.image-placeholder.map2 {
+    background-image: url('path_to_map_image2.jpg');
+}
+
+.image-placeholder:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+.image-placeholder:hover .image-text {
+    opacity: 1;
+}
+
+.image-placeholder:hover .image-header {
+    opacity: 1;
+}
+
+.image-header {
+    position: sticky;
+    font-size: 1.2rem;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: rgb(255, 234, 205);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.image-text {
+    position: absolute;
+    text-align: left;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: rgb(255, 234, 205);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.map-section {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-name {
+    font-family: 'Forum', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.links-list {
+    list-style: none;
+    text-align: left;
+    font-size: 2rem; /* Larger text for links */
+    margin-top: 80px;
+    padding-left: 250px;
+}
+
+.links-list li {
+    margin: 20px 0;
+}
+
+.links-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}

@@ -15,7 +15,7 @@ body, html {
 
 .container {
     position: relative;
-    background-image: url('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/background_recap.jpeg');
+    background-image: url('background_recap.jpeg');
     background-size: cover;
     background-position: center;
     min-height: 100%;

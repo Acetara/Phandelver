@@ -39,7 +39,7 @@ body, html {
     position: relative;
     width: 70%;
     max-width: 900px;
-    background-image: url('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/parchment.png'); /* Use your parchment image */
+    background-image: url('parchment.png'); /* Use your parchment image */
     background-size: cover; /* Ensure the image covers the whole area */
     background-repeat: repeat-y; /* Repeat vertically */
     padding: 40px 20px 80px;
@@ -92,7 +92,7 @@ body, html {
 .image-placeholder {
     width: 70%; /* Set width to 70% */
     height: 400px;
-    background-image: url('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/worldmap.png');
+    background-image: url('worldmap.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

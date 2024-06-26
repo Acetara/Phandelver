@@ -138,13 +138,13 @@ nav {
 }
 
 .image-placeholder.map1 {
-    background-image: url('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/swordcoast_map.jpeg');
+    background-image: url('swordcoast_map.jpeg');
     width: 220px; /* Fixed width */
     height: 300px; /* Fixed height */
 }
 
 .image-placeholder.map2 {
-    background-image: url('/Users/max.barkman/Desktop/Websites/Lost Mines/Phandelver/phandalin_map.png');
+    background-image: url('phandalin_map.png');
     width: 300px; /* Fixed width */
     height: 200px; /* Fixed height */
 }

@@ -170,14 +170,6 @@ nav {
     background-image: url('9.png');
 }
 
-.image-placeholder.map1 {
-    background-image: url('path_to_map_image1.jpg');
-}
-
-.image-placeholder.map2 {
-    background-image: url('path_to_map_image2.jpg');
-}
-
 .image-placeholder:hover {
     background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
 }
